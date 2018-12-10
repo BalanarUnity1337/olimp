@@ -1,0 +1,122 @@
+.breadcrumbs {
+  @include container();
+  margin-top: 3px;
+  padding-top: 15px;
+  color: $main-font-color-1;
+}
+
+.breadcrumbs__inner {
+  padding: 8px 10px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: $block-bg-color-1;
+}
+
+.breadcrumbs__items {
+  @include ul-reset();
+  font-size: 0;
+  line-height: 12px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  padding-right: 12px;
+  line-height: 1em;
+
+  &:last-of-type {
+    margin-right: 0;
+    padding-right: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 6px;
+    height: 7px;
+    background-image: url("../img/icon-bread-pointer-mobile.png");
+    background-size: 6px 7px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.breadcrumbs__item-link {
+  font-size: 12px;
+  line-height: 1em;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-2;
+  }
+
+  &--home {
+    font-size: 0;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $hover-font-color-1;
+    }
+  }
+
+  &--current {
+    color: $active-font-color-1;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.breadcrumbs__item-link--home svg {
+  width: 14px;
+  height: 12px;
+}
+
+@media #{$tablet-width} {
+  .breadcrumbs {
+    padding-top: 20px;
+  }
+
+  .breadcrumbs__inner {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .breadcrumbs__items {
+    line-height: 14px;
+  }
+
+  .breadcrumbs__item {
+    margin-right: 6px;
+    padding-right: 14px;
+
+    &::after {
+      top: 3px;
+      width: 7px;
+      height: 9px;
+      background-image: url("../img/icon-bread-pointer-tablet-desktop.png");
+      background-size: 7px 9px;
+    }
+  }
+
+  .breadcrumbs__item-link {
+    font-size: 14px;
+
+    &--home {
+      font-size: 0;
+    }
+  }
+
+  .breadcrumbs__item-link--home svg {
+    width: 20px;
+    height: 16px;
+  }
+}

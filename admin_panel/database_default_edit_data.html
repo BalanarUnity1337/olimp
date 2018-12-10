@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Панель состояния - Admin Panel</title>
+  </head>
+
+  <body class="page-wrapper">
+    <div class="page-content">
+      <div class="left-side">
+        <div class="left-side__top-panel">
+          <div class="left-side__logo">
+            <img src="img/logo-light.png" alt="" width="193" height="40">
+          </div>
+  
+          <div class="left-side__toggle-view-mode-button  left-side__toggle-view-mode-button--expanded">
+            <i class="fa  fa-outdent"></i>
+          </div>
+        </div>
+  
+        <div class="left-side__user-info">
+          <div class="left-side__user-info-avatar">
+            <img src="img/user-avatar.png" alt="" width="70" height="70">
+          </div>
+  
+          <div class="left-side__user-info-text">
+            <div class="left-side__user-info-sf-names">Елизенцев Иван</div>
+            <small class="left-side__user-info-post">Главный администратор</small>
+          </div>
+        </div>
+  
+        <nav class="menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-dashboard"></i>
+                <span class="menu__item-link-txt">Панель состояния</span>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-tags"></i>
+                <span class="menu__item-link-txt">Каталог</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-tv"></i>
+                <span class="menu__item-link-txt">Дизайн</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-shopping-cart"></i>
+                <span class="menu__item-link-txt">Продажи</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+  
+              <ul class="menu__sub-items">
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Заказы</span>
+                  </a>
+                </li>
+  
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Возвраты</span>
+                  </a>
+                </li>
+  
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Подарочные сертификаты</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-users"></i>
+                <span class="menu__item-link-txt">Клиенты</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-share-alt"></i>
+                <span class="menu__item-link-txt">Маркетинг</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-database"></i>
+                <span class="menu__item-link-txt">База данных</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-folder-open"></i>
+                <span class="menu__item-link-txt">Страницы</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+  
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-bar-chart"></i>
+                <span class="menu__item-link-txt">Отчеты</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="page-content__inner">
+        <header class="page-header">
+          <div class="page-header__inner">
+            <div class="page-header__notification-icons">
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="1" title="Уведомления">
+                  <i class="fa  fa-bell-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--notifications">
+                  <div class="notification-popup__header">
+                    У вас 5 новых уведомлений
+                  </div>
+
+                  <div class="notification-popup__items">
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-25T14:53">25.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-26T14:53">26.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">John Doe</span>
+                        добавил новую категорию товаров
+                      </span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-27T23:53">27.11.2017 23:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-28T01:40">28.11.2017 01:40</time>
+                    </div>
+                  </div>
+
+                  <a class="notification-popup__view-all-notifications" href="#" data-url="">Посмотреть все уведомления</a>
+                </div>
+              </div>
+
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="3" title="Почта">
+                  <i class="fa  fa-envelope-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--messages">
+                  <div class="notification-popup__header">
+                    У вас 5 непрочитанных сообщений
+                  </div>
+
+                  <div class="notification-popup__items">
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-25T14:53">25.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-26T14:53">26.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-27T23:53">27.11.2017 23:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-28T01:40">28.11.2017 01:40</time>
+                    </div>
+                  </div>
+
+                  <a class="notification-popup__view-all-notifications" href="#" data-url="">Посмотреть все сообщения</a>
+                </div>
+              </div>
+
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="3" title="Чат">
+                  <i class="fa  fa-commenting-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--chat">
+                  <div class="notification-popup__chat-section">
+                    <div class="notification-popup__chat">
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T03:20">03:20</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="ff6633" style="color: #ff6633;">Елизенцев Иван:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет</span>
+                      </div>
+
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T13:37">13:37</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="85c875" style="color: #85c875;">John Doe:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет, Привет, привет, Привет, привет, Привет, привет</span>
+                      </div>
+
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T13:37">13:37</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="85c875" style="color: #85c875;">John Doe:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет, Привет, привет, Привет, привет, Привет, привет</span>
+                      </div>
+                    </div>
+
+                    <div class="notification-popup__chat-footer">
+                      <div class="notification-popup__chat-send-message-text">
+                        <input type="text" name="" placeholder="Введите текст сообщения...">
+                      </div>
+
+                      <div class="notification-popup__chat-send-message-button">
+                        <button type="button">Отправить</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notification-popup__chat-members-section">
+                    <div class="notification-popup__chat-members-section-title">Участники</div>
+
+                    <ul class="notification-popup__chat-members-list">
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="online">Елизенцев Иван</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="online">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="afk">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="dnd">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="offline">John Doe</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-header__user-section">
+              <div class="page-header__language-selection">
+                <div class="select  select--light  page-header__selected-language  tooltip" title="Выбрать язык">
+                  Русский
+                  <i class="fa  fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item  dropdown__item--current">
+                      <a href="#">Русский</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a href="#">English</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="page-header__user-profile">
+                <div class="page-header__user-info" data-selectable-dropdown="false">
+                  <div class="page-header__user-avatar">
+                    <img src="img/user-avatar.png" alt="" width="40" height="40">
+                  </div>
+
+                  <span class="page-header__user-name">Rush3D</span>
+
+                  <i class="fa  fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light  dropdown--user-profile">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item">
+                      <a href="#">Личный кабинет</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a href="#">Выйти</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+  
+        <main class="page-main-content">
+          <nav class="breadcrumbs">
+            <a class="breadcrumbs__item" href="/index.html">
+              <i class="fa  fa-home"></i>
+            </a>
+  
+            <i class="fa  fa-angle-right"></i>
+  
+            <a class="breadcrumbs__item">База данных</a>
+  
+            <i class="fa  fa-angle-right"></i>
+  
+            <a class="breadcrumbs__item  breadcrumbs__item--current">Таблицы статистических данных</a>
+          </nav>
+  
+          <div class="page-main-content__header">
+            <h1 class="page-main-content__title">
+              Таблицы статистических данных
+            </h1>
+          </div>
+  
+          <div class="blocks-wrapper">
+            <div class="db-table  db-table--editing-data" data-table-category="" data-table-name="cart">
+              <div class="db-table__header">
+                <span class="db-table__header-title">cart</span>
+  
+                <div class="db-table__header-controls">
+                  <span class="db-table__header-control-view-data">
+                    <i class="fa  fa-table"></i>
+                  </span>
+  
+                  <span class="db-table__header-control-toggle-visibility" data-table-state-visibility="expanded">
+                    <i class="fa  fa-angle-up"></i>
+                  </span>
+                </div>
+              </div>
+  
+              <table class="db-table__data-table">
+                <thead>
+                  <tr class="db-table__data-table-header-row">
+                    <th class="db-table__data-table-header-row-cell" data-table-header-sortable="false">Поле</th>
+                    <th class="db-table__data-table-header-row-cell" data-table-header-sortable="false">Тип</th>
+                    <th class="db-table__data-table-header-row-cell" data-table-header-sortable="false">Значение</th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="text">
+                          <input class="db-table__data-table-input-field" type="text">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">customer_id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="select">
+                          <input class="db-table__data-table-input-field" type="text">
+                          <i class="fa  fa-caret-down"></i>
+                        </div>
+  
+                        <div class="db-table__data-table-dropdown">
+                          <ul class="db-table__data-table-dropdown-items">
+                            <li class="db-table__data-table-dropdown-item">
+                              1
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              2
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              3
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              4
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              5
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              6
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">product_id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="select">
+                          <input class="db-table__data-table-input-field" type="text">
+                          <i class="fa  fa-caret-down"></i>
+                        </div>
+  
+                        <div class="db-table__data-table-dropdown">
+                          <ul class="db-table__data-table-dropdown-items">
+                            <li class="db-table__data-table-dropdown-item">
+                              1
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              2
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              3
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              4
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              5
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              6
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">quantity</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="select">
+                          <input class="db-table__data-table-input-field" type="text">
+                          <i class="fa  fa-caret-down"></i>
+                        </div>
+  
+                        <div class="db-table__data-table-dropdown">
+                          <ul class="db-table__data-table-dropdown-items">
+                            <li class="db-table__data-table-dropdown-item">
+                              1
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              2
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              3
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              4
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              5
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              6
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row  db-table__data-table-body-row--separator">
+                    <td class="db-table__data-table-body-row-cell" colspan="3"></td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="text">
+                          <input class="db-table__data-table-input-field" type="text">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">customer_id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="select">
+                          <input class="db-table__data-table-input-field" type="text">
+                          <i class="fa  fa-caret-down"></i>
+                        </div>
+  
+                        <div class="db-table__data-table-dropdown">
+                          <ul class="db-table__data-table-dropdown-items">
+                            <li class="db-table__data-table-dropdown-item">
+                              1
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              2
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              3
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              4
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              5
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              6
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">product_id</td>
+                    <td class="db-table__data-table-body-row-cell">int(10) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="select">
+                          <input class="db-table__data-table-input-field" type="text">
+                          <i class="fa  fa-caret-down"></i>
+                        </div>
+  
+                        <div class="db-table__data-table-dropdown">
+                          <ul class="db-table__data-table-dropdown-items">
+                            <li class="db-table__data-table-dropdown-item">
+                              1
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              2
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              3
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              4
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              5
+                            </li>
+                            <li class="db-table__data-table-dropdown-item">
+                              6
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr class="db-table__data-table-body-row">
+                    <td class="db-table__data-table-body-row-cell">quantity</td>
+                    <td class="db-table__data-table-body-row-cell">smallint(5) unsigned</td>
+                    <td class="db-table__data-table-body-row-cell">
+                      <div class="db-table__data-table-value-selection">
+                        <div class="db-table__data-table-input" data-table-input-type="text">
+                          <input class="db-table__data-table-input-field" type="text">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+  
+              <div class="db-table__footer">
+                <button class="button  button--submit">Подтвердить</button>
+                <button class="button  button--reset">Сбросить</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__copyright">
+          <span class="page-footer__create-by">Created by Rush3D1337</span>
+        </div>
+
+        <div class="page-footer__cms-version">
+          Version 0.1
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

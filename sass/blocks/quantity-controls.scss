@@ -1,0 +1,100 @@
+.quantity-controls {
+  font-size: 0;
+}
+
+.quantity-controls__button {
+  @include button-reset();
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 31px;
+  height: 32px;
+  border: 1px solid $main-border-color-1;
+  background-color: $block-bg-color-2;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &--minus, &--plus {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 2px;
+      background-color: $main-button-font-color-1;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &--minus {
+    border-radius: 2px 0 0 2px;
+    border-right: none;
+  }
+
+  &--plus {
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 16px;
+      height: 2px;
+      background-color: $main-button-font-color-1;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &:hover {
+    border-color: $hover-border-color-1;
+  }
+
+  &--minus, &--plus {
+    &:hover {
+      background-color: $hover-button-bg-color-1;
+
+      &::before {
+        background-color: $hover-button-font-color-1;
+      }
+    }
+  }
+
+  &--plus {
+    &:hover {
+      &::after {
+        background-color: $hover-button-font-color-1;
+      }
+    }
+  }
+}
+
+.quantity-controls__field {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 1em;
+  text-align: center;
+  border: 1px solid $main-border-color-1;
+  border-left: none;
+  border-right: none;
+  background-color: $block-bg-color-1;
+  transition: border-color 0.3s ease;
+
+  &:hover, &:focus {
+    border-color: $hover-border-color-2;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,25 @@
+.catalog-main-categories {
+  @include container();
+  padding-bottom: 15px;
+
+  @media #{$tablet-width} {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-bottom: 20px;
+
+    &::after {
+      content: "";
+      flex: 0 1 46.51%;
+    }
+  }
+
+  @media #{$desktop-width} {
+    padding-bottom: 25px;
+
+    &::after {
+      flex: 0 1 47.28%;
+    }
+  }
+}

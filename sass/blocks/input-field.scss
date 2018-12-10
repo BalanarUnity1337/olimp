@@ -1,0 +1,50 @@
+.input-field {
+  display: block;
+  box-sizing: border-box;
+  width: 240px;
+  height: 30px;
+  padding: 9px;
+  font-size: 14px;
+  line-height: 1em;
+  color: inherit;
+  border: 1px solid $main-border-color-1;
+  border-radius: 2px;
+  background-color: $main-input-field-bg-color;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+  &::-webkit-input-placeholder {
+    opacity: 0.7;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0.7;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0.7;
+  }
+
+  &:-moz-placeholder {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    border-color: $hover-border-color-2;
+    background-color: $main-input-field-bg-color;
+  }
+
+  &:focus {
+    padding-left: 8px;
+    padding-right: 8px;
+    outline: none;
+    border-color: $active-border-color-1;
+    border-width: 2px;
+    box-shadow: 0 0 5px 0 $input-field-shadow-color;
+    background-color: $active-input-field-bg-color;
+  }
+
+  &--error {
+    border-color: $error-font-color;
+    background-color: rgba($error-font-color, 0.05);
+  }
+}

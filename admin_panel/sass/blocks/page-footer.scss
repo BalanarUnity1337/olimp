@@ -1,0 +1,30 @@
+.page-footer {
+  margin-top: 60px;
+  color: $footer-font-color;
+  background-color: $footer-bg;
+}
+
+.page-footer__inner {
+  @include container();
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.page-footer__copyright-author {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.page-footer__created-by {
+  display: block;
+  font-size: 14px;
+}
+
+.page-footer__cms-version {
+  font-size: 14px;
+}

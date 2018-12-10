@@ -1,0 +1,113 @@
+.contacts {
+  @include container();
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contacts__inner {
+  padding-top: 8px;
+  border: 1px solid $main-border-color-1;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: $block-bg-color-1;
+}
+
+.contacts__location {
+
+}
+
+.contacts__town-title {
+  @include header-reset();
+  padding-bottom: 16px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-size: 22px;
+  line-height: 26px;
+  cursor: default;
+}
+
+.contacts__address-list {
+  @include ul-reset();
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.contacts__address-item {
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 18px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__address-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-2;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 400px;
+  margin-top: 17px;
+  background-color: #dfdfdf;
+  background-image: url("../img/contacts-map-mobile.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+// < --- Tablet width --- >
+
+@media #{$tablet-width} {
+  .contacts {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .contacts__town-title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .contacts__address-item {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+
+  .contacts__map {
+    margin-top: 15px;
+    background-image: url("../img/contacts-map-tablet.jpg");
+  }
+}
+
+// < --- Desktop width --- >
+
+@media #{$desktop-width} {
+  .contacts {
+    padding-bottom: 25px;
+  }
+
+  .contacts__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-right: 9px;
+    padding-bottom: 10px;
+  }
+
+  .contacts__map {
+    width: 500px;
+    margin-top: 0;
+    background-image: url("../img/contacts-map-desktop.jpg");
+  }
+}

@@ -1,0 +1,50 @@
+.page-wrapper {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: $main-font-color-1;
+  background-color: $main-site-bg-color-1;
+
+  &--unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@media #{$desktop-width} {
+  .page-wrapper {
+    // padding-bottom: 194px;
+    // width: calc(100% + 17px);
+    // overflow: hidden;
+  }
+}
+
+* {
+  &::-webkit-scrollbar {
+    width: 8px;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scroll-track-bg-color-1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($scroll-track-bar-bg-color-1, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover, &:active {
+      background-color: rgba($scroll-track-bar-bg-color-1, 1);
+    }
+  }
+}

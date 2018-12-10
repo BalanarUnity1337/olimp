@@ -1,0 +1,132 @@
+.catalog-product {
+  position: relative;
+}
+
+.catalog-product__left-content {
+  display: flex;
+}
+
+.catalog-product__photo {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.catalog-product__photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 70px;
+  margin: 0 auto;
+}
+
+.catalog-product__info {
+
+}
+
+.catalog-product__title {
+  @include header-reset();
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.catalog-product__title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-1;
+  }
+}
+
+.catalog-product__description {
+  @include paragraph-reset();
+  font-size: 13px;
+  line-height: 15px;
+  color: $main-font-color-4;
+  overflow: hidden;
+}
+
+.catalog-product__price {
+
+}
+
+.catalog-product__right-content {
+  display: flex;
+}
+
+.catalog-product__exist-block {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.catalog-product__buy {
+  font-size: 16px;
+
+  &--not-available {
+    color: $error-font-color;
+    border-color: $error-font-color;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $error-font-color;
+      background-color: $main-button-bg-color-1;
+    }
+  }
+
+  &--in-cart {
+    &:hover {
+      color: $hover-font-color-1;
+      background-color: $main-button-bg-color-1;
+    }
+  }
+}
+
+//////////////////////////////
+// < --- Tablet width --- > //
+//////////////////////////////
+
+@media #{$tablet-width} {
+  .catalog-product {
+    position: relative;
+    display: flex;
+  }
+
+  .catalog-product__left-content {
+    display: flex;
+  }
+
+  .catalog-product__photo {
+    position: static;
+  }
+
+  .catalog-product__info {
+
+  }
+
+  .catalog-product__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .catalog-product__description {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .catalog-product__price {
+
+  }
+
+  .catalog-product__right-content {
+
+  }
+
+  .catalog-product__exist-block {
+
+  }
+
+  .catalog-product__buy {
+
+  }
+}

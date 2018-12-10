@@ -1,0 +1,13 @@
+.page-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  // min-height: 100vh;
+  height: 100%;
+}
+
+.page-content__inner {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+}

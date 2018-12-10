@@ -1,0 +1,11 @@
+.field-error {
+  display: none;
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  color: $error-font-color;
+
+  &--visible {
+    display: block;
+  }
+}

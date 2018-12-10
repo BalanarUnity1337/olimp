@@ -1,0 +1,44 @@
+.radio {
+  position: relative;
+  padding-left: 23px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $main-border-color-1;
+    border-radius: 50%;
+    transition: border-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $hover-border-color-2;
+    }
+  }
+}
+
+input[type="radio"]:checked + .radio::before {
+  border-color: $active-border-color-1;
+}
+
+input[type="radio"]:checked + .radio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $active-border-color-1;
+}
+
+input[type="radio"] {
+  display: none;
+}

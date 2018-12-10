@@ -1,0 +1,26 @@
+.scroll-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.scroll-content > .scroll-track {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .scroll-content {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    // padding-bottom: 194px;
+    height: 662px;
+    overflow-y: auto;
+  }
+
+  .scroll-content > .scroll-track {
+    position: fixed;
+    display: block;
+    z-index: 50;
+  }
+}

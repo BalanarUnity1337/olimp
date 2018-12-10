@@ -1,0 +1,195 @@
+.form {
+  @include container();
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 1em;
+}
+
+.form__inner {
+  padding: 10px 9px;
+  border: 1px solid $main-border-color-1;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: $block-bg-color-1;
+}
+
+.form__row {
+  margin-bottom: 15px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--user-controls {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.form__input-field-label {
+  display: inline-block;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.form__registration-input-field-password {
+  position: relative;
+}
+
+.form__registration-input-field-password input {
+  padding-right: 30px;
+
+  &:focus {
+    padding-right: 29px;
+  }
+}
+
+.form__registration-input-field-toggle-password {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 18px;
+  height: 16px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &--show {
+    background-image: url("../img/icon-show-password.svg");
+    background-size: 18px 12px;
+  }
+
+  &--hide {
+    background-image: url("../img/icon-hide-password.svg");
+    background-size: 18px 16px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.form__remember-me {
+  float: left;
+  line-height: 18px;
+}
+
+.form__forgotten-password {
+  float: right;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-2;
+  }
+}
+
+.form__login-button {
+  display: block;
+  width: 140px;
+  height: 32px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1em;
+}
+
+.form__reg-button {
+  width: 240px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1em;
+  border-radius: 3px;
+}
+
+.form__footer {
+  margin-top: 13px;
+  text-align: center;
+}
+
+.form__create-new-account {
+  position: relative;
+  color: $hover-font-color-2;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: $hover-font-color-2;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+// < --- Tablet width --- >
+
+@media #{$tablet-width} {
+  .form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .form__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .form__login-content {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .form__registration-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .form__registration-content .form__row {
+    &:last-of-type {
+      margin-right: 100%;
+    }
+  }
+
+  .form__registration-input-field {
+    width: 300px;
+  }
+
+  .form__reg-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+  }
+}
+
+// < --- Desktop width --- >
+
+@media #{$desktop-width} {
+  .form {
+    padding-bottom: 25px;
+  }
+
+  .form__registration-input-field {
+    width: 400px;
+  }
+}

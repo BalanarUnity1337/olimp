@@ -1,0 +1,27 @@
+@mixin container() {
+  margin: 0 auto;
+  padding: 0 30px;
+  // max-width: 1240px;
+}
+
+@mixin ul-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset() {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin header-reset() {
+  margin: 0;
+}
+
+@mixin paragraph-reset() {
+  margin: 0;
+}

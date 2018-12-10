@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Font Awesome";
+  font-style: normal;
+  src:
+    local("FontAwesome"),
+    local("Font Awesome"),
+    url("../fonts/FontAwesome/FontAwesome.woff2") format("woff2"),
+    url("../fonts/FontAwesome/FontAwesome.woff") format("woff"),
+    url("../fonts/FontAwesome/FontAwesome.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: normal;
+  src:
+    local("Roboto Light"),
+    local("Roboto-Light"),
+    url("../fonts/Roboto/Light/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto/Light/Roboto.woff") format("woff"),
+    url("../fonts/Roboto/Light/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local("Roboto"),
+    local("Roboto-Regular"),
+    url("../fonts/Roboto/Regular/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto/Regular/Roboto.woff") format("woff"),
+    url("../fonts/Roboto/Regular/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: italic;
+  src:
+    local("Roboto Italic"),
+    local("Roboto-Italic"),
+    url("../fonts/Roboto/Regular/Italic/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto/Regular/Italic/Roboto.woff") format("woff"),
+    url("../fonts/Roboto/Regular/Italic/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src:
+    local("Roboto Medium"),
+    local("Roboto-Medium"),
+    url("../fonts/Roboto/Medium/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto/Medium/Roboto.woff") format("woff"),
+    url("../fonts/Roboto/Medium/Roboto.tff") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    local("Roboto Bold"),
+    local("Roboto-Bold"),
+    url("../fonts/Roboto/Bold/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto/Bold/Roboto.woff") format("woff"),
+    url("../fonts/Roboto/Bold/Roboto.ttf") format("truetype");
+}

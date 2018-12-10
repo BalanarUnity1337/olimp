@@ -1,0 +1,128 @@
+.cart-product {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $main-border-color-1;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.cart-product__photo {
+  display: block;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.cart-product__photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 90px;
+  margin: 0 auto;
+}
+
+.cart-product__title {
+  @include header-reset();
+  width: 130px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.cart-product__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-1;
+  }
+}
+
+.cart-product__user-controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.cart-product__price {
+  align-self: center;
+  max-width: 80px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.cart-product__remove-button {
+  @include button-reset();
+  width: 26px;
+  height: 30px;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cart-product__remove-button svg {
+  fill: $main-font-color-1;
+  transition: fill 0.3s ease;
+}
+
+.cart-product__remove-button:hover svg {
+  fill: $hover-font-color-1;
+}
+
+// < --- Tablet width --- >
+
+@media #{$tablet-width} {
+  .cart-product {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 15px;
+  }
+
+  .cart-product__photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-product__photo img {
+    max-height: 70px;
+  }
+
+  .cart-product__title {
+    flex-grow: 1;
+    margin-left: 25px;
+    margin-right: 31px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .cart-product__user-controls {
+    flex: 0 0 222px;
+    margin-top: 0;
+  }
+
+  .cart-product__price {
+    max-width: 70px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+// < --- Desktop width --- >
+
+@media #{$desktop-width} {
+
+  .cart-product__title {
+    margin-right: 62px;
+  }
+}

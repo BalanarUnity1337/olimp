@@ -1,0 +1,187 @@
+.overall-report {
+  max-width: 920px;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.overall-report__report-period {
+  padding: 10px 0 20px 9px;
+}
+
+.overall-report__select-name {
+  vertical-align: middle;
+  margin-right: 17px;
+  font-size: 16px;
+}
+
+.overall-report__report-period-selection {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.overall-report__report-categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.overall-report__report-category {
+  position: relative;
+  flex: 0 0 210px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: 80px;
+  text-decoration: none;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  &--visitors {
+    .overall-report__report-category-icon {
+      background-color: #ff8761;
+      background-image: url("../img/overall-report-visitors.png");
+      background-size: 30px 26px;
+    }
+
+    .overall-report__report-category-title {
+      color: #ff8761;
+    }
+
+    &::after {
+      background-color: rgba(#ff8761, 0.1);
+    }
+  }
+
+  &--customers {
+    .overall-report__report-category-icon {
+      background-color: #57bdde;
+      background-image: url("../img/overall-report-customers.png");
+      background-size: 30px 31px;
+    }
+
+    .overall-report__report-category-title {
+      color: #57bdde;
+    }
+
+    &::after {
+      background-color: rgba(#57bdde, 0.1);
+    }
+  }
+
+  &--orders {
+    .overall-report__report-category-icon {
+      background-color: #b198dc;
+      background-image: url("../img/overall-report-orders.png");
+      background-size: 30px 30px;
+    }
+
+    .overall-report__report-category-title {
+      color: #b198dc;
+    }
+
+    &::after {
+      background-color: rgba(#b198dc, 0.1);
+    }
+  }
+
+  &--purchases {
+    .overall-report__report-category-icon {
+      background-color: #6dc7be;
+      background-image: url("../img/overall-report-purchases.png");
+      background-size: 30px 22px;
+    }
+
+    .overall-report__report-category-title {
+      color: #6dc7be;
+    }
+
+    &::after {
+      background-color: rgba(#6dc7be, 0.1);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+
+    &::after {
+      transform: scaleX(1)
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+  }
+}
+
+.overall-report__report-category-icon {
+  flex: 0 0 60px;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.overall-report__report-category-text-content {
+  flex: auto;
+  align-self: center;
+  padding-left: 18px;
+}
+
+.overall-report__report-category-title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.overall-report__report-numerical-indicators {
+  display: block;
+}
+
+.overall-report__report-numerical-indicators .fa-sort-up {
+  position: relative;
+  top: 6px;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #48cc29;
+}
+
+.overall-report__report-numerical-indicators .fa-sort-up.fa-rotate-180 {
+  top: auto;
+  bottom: 3px;
+  color: #fc2e00;
+}
+
+.overall-report__report-numerical-indicators-value {
+  vertical-align: middle;
+  font-size: 16px;
+  color: #444444;
+}
+
+.overall-report__report-numerical-indicators-rate {
+  vertical-align: middle;
+  font-size: 16px;
+
+  &--grow {
+    color: #48cc29;
+  }
+
+  &--shrink {
+    color: #fc2e00;
+  }
+}

@@ -1,0 +1,17 @@
+.button {
+  @include button-reset();
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 400;
+  color: $main-button-font-color-1;
+  border: 1px solid $main-button-border-color-1;
+  border-radius: 2px;
+  background-color: $main-button-bg-color-1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    color: $hover-button-font-color-1;
+    background-color: $hover-button-bg-color-1;
+  }
+}

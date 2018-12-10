@@ -1,0 +1,11 @@
+root: true
+
+env:
+  browser: true
+  node: true
+
+globals:
+  define: true
+
+extends:
+  'balanarunity1337/es5'

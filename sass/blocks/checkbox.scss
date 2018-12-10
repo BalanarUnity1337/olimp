@@ -1,0 +1,42 @@
+.checkbox {
+  position: relative;
+  padding-left: 23px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $main-border-color-1;
+    border-radius: 2px;
+    background-color: $main-input-field-bg-color;
+    transition: border-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $hover-border-color-2;
+    }
+  }
+}
+
+input[type="checkbox"]:checked + .checkbox {
+  color: $hover-button-font-color-1;
+  background-color: $hover-button-bg-color-1;
+}
+
+input[type="checkbox"]:checked + .checkbox::before {
+  background-image: url("../img/icon-checked.svg");
+  background-position: 50% 50%;
+  background-size: 12px 10px;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

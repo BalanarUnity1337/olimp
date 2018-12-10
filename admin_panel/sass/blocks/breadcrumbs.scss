@@ -1,0 +1,25 @@
+.breadcrumbs {
+
+}
+
+.breadcrumbs__item {
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &--current {
+    color: $active-font-color;
+    cursor: default;
+  }
+
+  &:hover {
+    color: $active-font-color;
+  }
+}
+
+.breadcrumbs .fa-angle-right {
+  vertical-align: middle;
+  padding: 0 3px 3px;
+  font-size: 14px;
+}

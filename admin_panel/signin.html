@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="father" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Вход - Admin Panel</title>
+  </head>
+
+  <body class="page-wrapper">
+    <div class="page-content">
+      <div class="page-content__inner">
+        <header class="page-header">
+          <div class="page-header__inner">
+            <div class="page-header__logo">
+              <img src="img/logo-dark.png" alt="" width="193" height="40" />
+            </div>
+
+            <div class="page-header__user-section">
+              <div class="page-header__language-selection">
+                <div
+                  class="select  select--light  page-header__selected-language"
+                >
+                  Русский <i class="fa  fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item  dropdown__item--current">
+                      Русский
+                    </li>
+
+                    <li class="dropdown__item">English</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page-main-content">
+          <div class="form">
+            <div class="form__header">
+              <i class="fa  fa-lock  form__header-icon"></i>
+              <span class="form__header-title">Введите логин и пароль</span>
+            </div>
+
+            <form class="form__inner" action="">
+              <div class="form__input-field-row">
+                <input
+                  class="form__input-field"
+                  type="text"
+                  name="userLogin"
+                  id="user-login"
+                />
+                <div class="form__input-field-border-bottom"></div>
+                <label class="form__input-label" for="user-login">Логин</label>
+              </div>
+
+              <div class="form__input-field-row">
+                <input
+                  class="form__input-field"
+                  type="password"
+                  name="userPassword"
+                  id="user-password"
+                />
+                <div class="form__input-field-border-bottom"></div>
+                <label class="form__input-label" for="user-password"
+                  >Пароль</label
+                >
+
+                <span class="form__toggle-password-visibility">
+                  <i class="fa  fa-eye"></i>
+                </span>
+              </div>
+
+              <a class="form__input-field-notice" href="#">Забыли пароль?</a>
+
+              <button class="button  button--login" type="submit">
+                <i class="fa  fa-key"></i> Войти
+              </button>
+            </form>
+          </div>
+        </main>
+
+        <footer class="page-footer">
+          <div class="page-footer__inner">
+            <div class="page-footer__copyright">
+              <span class="page-footer__copyright-author">Admin Panel</span>
+              <span class="page-footer__create-by">Created by Rush3D1337</span>
+            </div>
+
+            <div class="page-footer__cms-version">Version 0.1</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

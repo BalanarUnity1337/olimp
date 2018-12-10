@@ -1,0 +1,135 @@
+.registration {
+  @include container();
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 1em;
+}
+
+.registration__inner {
+  padding: 10px 9px;
+  border: 1px solid $main-border-color-1;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: $block-bg-color-1;
+}
+
+.registration__form {
+
+}
+
+.registration__form-row {
+  margin-bottom: 15px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.registration__input-field-label {
+  display: inline-block;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.registration__input-field {
+
+}
+
+.registration__input-field-password {
+  position: relative;
+}
+
+.registration__input-field-password input {
+  padding-right: 30px;
+
+  &:focus {
+    padding-right: 29px;
+  }
+}
+
+.registration__input-field-toggle-password {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 18px;
+  height: 16px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &--show {
+    background-image: url("../img/icon-show-password.svg");
+    background-size: 18px 12px;
+  }
+
+  &--hide {
+    background-image: url("../img/icon-hide-password.svg");
+    background-size: 18px 16px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.registration__reg-button {
+  width: 240px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1em;
+  border-radius: 3px;
+}
+
+// < --- Tablet width --- >
+
+@media #{$tablet-width} {
+  .registration {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .registration__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .registration__form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .registration__form-row {
+    &:last-of-type {
+      margin-right: 100%;
+    }
+  }
+
+  .registration__input-field {
+    width: 300px;
+  }
+
+  .registration__reg-button {
+    // flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+  }
+}
+
+// < --- Desktop width --- >
+
+@media #{$desktop-width} {
+  .registration {
+    padding-bottom: 25px;
+  }
+
+  .registration__input-field {
+    width: 400px;
+  }
+}

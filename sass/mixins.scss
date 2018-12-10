@@ -1,0 +1,42 @@
+@mixin ul-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container() {
+  max-width: 260px;
+  margin: 0 auto;
+  padding-left: 9.375%;
+  padding-right: 9.375%;
+
+  @media #{$tablet-width} {
+    max-width: 688px;
+    padding-left: 5.208%;
+    padding-right: 5.208%;
+  }
+
+  @media #{$desktop-width} {
+    max-width: 920px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@mixin button-reset() {
+  padding: 0;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin header-reset() {
+  margin: 0;
+}
+
+@mixin paragraph-reset() {
+  margin: 0;
+}

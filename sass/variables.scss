@@ -1,0 +1,94 @@
+// Цвет шрифта
+$main-font-color-1: #313131;  // Основной цвет шрифта на сайте
+$main-font-color-2: #555555;  // Второй основной цвет шрифта на сайте
+$main-font-color-3: #ffffff;
+$main-font-color-4: #777777;
+$main-footer-font-color: #ffffff; // Основной цвет шрифта в футере
+
+$main-category-title-font-color: #555555; // Цвет заголовка главной категории
+$news-title-font-color: #bb0000;  // Цвет заголовка новости
+
+$hover-font-color-1: #71a51e; // Зеленый. Основный цвет сайта
+$hover-font-color-2: #00aeff; // Голубой
+$hover-font-color-3: #bb0000; // Красный
+
+$active-font-color-1: #71a51e;
+
+$main-currency-font-color: #71a51e;
+
+$hover-main-nav-item-font-color: #313131;
+
+$main-nav-item-font-color: #ffffff;
+
+$main-search-button-font-color: #ffffff;
+$hover-search-button-font-color: #313131;
+
+$main-button-font-color-1: #71a51e;
+$hover-button-font-color-1: #ffffff;
+
+$completed-font-color: #71a51e;
+$error-font-color: #bb0000;
+$waiting-font-color: #ffae00;
+$cancelled-font-color: #bb0000;
+
+// Фоновые цвета различных блоков
+$main-site-bg-color-1: #ededed;
+$main-site-bg-color-2: #ffffff;
+$main-nav-bg-color: #303229;
+$main-nav-item-bg-color: #303229;
+
+$main-input-field-bg-color: #ffffff;
+
+$block-bg-color-1: #fafafa;
+$block-bg-color-2: #ededed;
+$block-bg-color-3: #ffffff;
+$hover-block-bg-color-1: #ffffff;
+$hover-block-bg-color-2: #f0f0f0;
+$hover-block-bg-color-3: #d7d7d7;
+$hover-block-bg-color-4: #f6f6f6;
+
+$select-bg-color-1: #f1f1f1;
+$hover-filter-bg-color-1: #f1f1f1;
+
+$dropdown-bg-color-1: #cccccc;
+
+$scroll-track-bg-color-1: #cccccc;
+$scroll-track-bar-bg-color-1: #71a51e;
+
+$active-input-field-bg-color: #f6f6f6;
+
+$main-button-bg-color-1: #ffffff;
+$main-button-bg-color-2: #71a51e;
+$hover-button-bg-color-1: #71a51e;
+
+$hover-main-nav-item-bg-color: #71a51e;
+$hover-button-bg-color: #71a51e;
+
+$main-search-button-bg-color: #8a8a8a;
+$hover-search-button-bg-color: #71a51e;
+
+$footer-bg-color: #303229;
+$footer-copyright-bg-color: #252525;
+
+// Обводка
+$main-border-color-1: #cccccc;
+$main-border-color-2: #8a8a8a;
+$main-border-color-3: #ededed;
+$main-nav-border-color: #71a51e;
+
+$hover-border-color-1: #71a51e;
+$hover-border-color-2: #8a8a8a;
+
+$active-border-color-1: #8a8a8a;
+
+$input-field-shadow-color: #71a51e;
+
+$footer-copyright-border-color: #71a51e;
+
+$main-button-border-color-1: #71a51e;
+$hover-button-border-color-1: #71a51e;
+
+// Breakpoints и ретина
+$desktop-width: "(min-width: 1000px)";
+$tablet-width: "(min-width: 768px)";
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

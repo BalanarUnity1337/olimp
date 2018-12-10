@@ -1,0 +1,141 @@
+.page-header {
+  background-color: $header-bg;
+  border-bottom: 1px solid $header-border;
+  box-shadow: 0 0 3px 0 #cccccc;
+}
+
+.page-header__inner {
+  @include container();
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-header__logo {
+  line-height: 0;
+}
+
+.page-header__logo img {
+
+}
+
+.page-header__notification-icons {
+  margin-left: 40px;
+  font-size: 0;
+}
+
+.page-header__notification-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.page-header__notification-icon {
+  position: relative;
+  font-size: 26px;
+  text-decoration: none;
+  color: #6c7278;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: attr(data-notification-count);
+    position: absolute;
+    bottom: 15px;
+    left: 12px;
+    width: 27px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #ff6633;
+  }
+
+  &:hover {
+    color: $active-font-color;
+  }
+}
+
+.page-header__user-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page-header__language-selection {
+  position: relative;
+}
+
+.page-header__selected-language {
+
+}
+
+.page-header__user-profile {
+  position: relative;
+  margin: -10px -20px -10px 30px;
+}
+
+.page-header__user-info {
+  position: relative;
+
+  padding: 10px 20px;
+  color: #666666;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+
+  &--active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+
+    .fa-caret-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:not(.page-header__user-profile--active):hover {
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.page-header__user-avatar {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  line-height: 0;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.page-header__user-avatar img {
+
+}
+
+.page-header__user-name {
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.page-header__user-info .fa-caret-down {
+  position: relative;
+  top: 4px;
+  margin-left: 8px;
+  font-size: 24px;
+  transition: transform 0.5s ease;
+}

@@ -1,0 +1,113 @@
+
+@media #{$tablet-width} {
+  .hover-image-wrapper {
+    position: relative;
+  }
+
+  .hover-image-wrapper__inner {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: calc(100% + 10px);
+    max-width: 260px;
+    padding: 15px 10px;
+    line-height: 0;
+    border: 1px solid $main-border-color-1;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: $block-bg-color-1;
+    animation-name: hover-image-fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: none;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 11px solid $main-border-color-1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: none;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 10px solid $block-bg-color-1;
+    }
+
+    &--right {
+      right: auto;
+      left: calc(100% + 10px);
+
+      &::before {
+        right: auto;
+        left: -11px;
+        border-left: none;
+        border-right: 11px solid $main-border-color-1;
+      }
+
+      &::after {
+        right: auto;
+        left: -9px;
+        border-left: none;
+        border-right: 10px solid $block-bg-color-1;
+      }
+    }
+  }
+
+  .hover-image-wrapper__inner img {
+    // maxwidth??
+  }
+}
+
+// @media #{$desktop-width} {
+//   .hover-image-wrapper__inner {
+//     left: auto;
+//     right: calc(100% + 10px);
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       left: auto;
+//       right: -11px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       border-right: none;
+//       border-left: 11px solid $main-border-color-1;
+//     }
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       left: auto;
+//       right: -9px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       border-right: none;
+//       border-left: 10px solid $block-bg-color-1;
+//     }
+//   }
+
+//   .hover-image-wrapper__inner img {
+//     // maxwidth??
+//   }
+// }
+
+@keyframes hover-image-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

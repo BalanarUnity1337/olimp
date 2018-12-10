@@ -1,0 +1,124 @@
+.select {
+  box-sizing: border-box;
+  position: relative;
+  width: 192px;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 32px;
+  color: $main-font-color-1;
+  border: 1px solid $main-border-color-1;
+  border-radius: 2px;
+  background-color: $select-bg-color-1;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $main-border-color-2;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    transition: border-color 0.3s ease, transform 0.3s ease, top 0.3s ease;
+  }
+
+  &:hover {
+    border-color: $hover-border-color-2;
+
+    &::after {
+      border-color: $hover-border-color-1
+    }
+  }
+
+  &--active {
+    border-color: $hover-border-color-2;
+
+    &::after {
+      top: 13px;
+      border-color: $hover-border-color-1;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.select__input-field {
+  box-sizing: border-box;
+  width: calc(100% - 16px);
+  border: none;
+  color: rgba($main-font-color-1, 0.7);
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  &::-webkit-input-placeholder {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  &:-moz-placeholder {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.select--active .select__input-field {
+  color: rgba($main-font-color-1, 1);
+  cursor: text;
+
+  &::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    opacity: 1;
+  }
+}
+
+.select:hover .select__input-field {
+  color: rgba($main-font-color-1, 1);
+
+  &::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    opacity: 1;
+  }
+}

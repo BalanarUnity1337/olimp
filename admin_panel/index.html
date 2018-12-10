@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/tooltipster/tooltipster.bundle.min.css" rel="stylesheet">
+    <link href="css/tooltipster/themes/tooltipster-sideTip-borderless.min.css" rel="stylesheet">
+    <link href="css/tooltipster/themes/tooltipster-sideTip-borderless-customized.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Панель состояния - Admin Panel</title>
+  </head>
+
+  <body class="page-wrapper">
+    <div class="page-content">
+      <div class="left-side">
+        <div class="left-side__top-panel">
+          <div class="left-side__logo">
+            <img src="img/logo-light.png" alt="" width="193" height="40">
+          </div>
+
+          <div class="left-side__toggle-view-mode-button  left-side__toggle-view-mode-button--expanded">
+            <i class="fa  fa-outdent"></i>
+          </div>
+        </div>
+
+        <div class="left-side__user-info">
+          <div class="left-side__user-info-avatar">
+            <img src="img/user-avatar.png" alt="" width="70" height="70">
+          </div>
+
+          <div class="left-side__user-info-text">
+            <div class="left-side__user-info-sf-names">Елизенцев Иван</div>
+            <small class="left-side__user-info-post">Главный администратор</small>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-dashboard"></i>
+                <span class="menu__item-link-txt">Панель состояния</span>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-tags"></i>
+                <span class="menu__item-link-txt">Каталог</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-tv"></i>
+                <span class="menu__item-link-txt">Дизайн</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-shopping-cart"></i>
+                <span class="menu__item-link-txt">Продажи</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+
+              <ul class="menu__sub-items">
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Заказы</span>
+                  </a>
+                </li>
+
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Возвраты</span>
+                  </a>
+                </li>
+
+                <li class="menu__sub-item">
+                  <a href="#" class="menu__sub-item-link">
+                    <i class="fa  fa-angle-double-right"></i>
+                    <span class="menu__sub-item-link-txt">Подарочные сертификаты</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-users"></i>
+                <span class="menu__item-link-txt">Клиенты</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-share-alt"></i>
+                <span class="menu__item-link-txt">Маркетинг</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-database"></i>
+                <span class="menu__item-link-txt">База данных</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-folder-open"></i>
+                <span class="menu__item-link-txt">Страницы</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">
+                <i class="fa  fa-bar-chart"></i>
+                <span class="menu__item-link-txt">Отчеты</span>
+                <i class="fa  fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="page-content__inner">
+        <header class="page-header">
+          <div class="page-header__inner">
+            <div class="page-header__notification-icons">
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="1" title="Уведомления">
+                  <i class="fa  fa-bell-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--notifications">
+                  <div class="notification-popup__header">
+                    У вас 5 новых уведомлений
+                  </div>
+
+                  <div class="notification-popup__items">
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-25T14:53">25.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-26T14:53">26.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">John Doe</span>
+                        добавил новую категорию товаров
+                      </span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-27T23:53">27.11.2017 23:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <span class="notification-popup__item-description">Пользователь №0123456789 оформил заказ</span>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-28T01:40">28.11.2017 01:40</time>
+                    </div>
+                  </div>
+
+                  <a class="notification-popup__view-all-notifications" href="#" data-url="">Посмотреть все уведомления</a>
+                </div>
+              </div>
+
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="3" title="Почта">
+                  <i class="fa  fa-envelope-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--messages">
+                  <div class="notification-popup__header">
+                    У вас 5 непрочитанных сообщений
+                  </div>
+
+                  <div class="notification-popup__items">
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-25T14:53">25.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-26T14:53">26.11.2017 14:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-27T23:53">27.11.2017 23:53</time>
+                    </div>
+
+                    <div class="notification-popup__item">
+                      <div class="notification-popup__item-photo">
+                        <img src="img/user-avatar-1.png" alt="" width="40" height="40">
+                      </div>
+
+                      <div class="notification-popup__item-description">
+                        <span class="notification-popup__item-author">Дима Шумм</span>
+
+                        <span class="notification-popup__item-message-subject">Тема сообщения</span>
+                      </div>
+
+                      <time class="notification-popup__item-date-time" datetime="2017-11-28T01:40">28.11.2017 01:40</time>
+                    </div>
+                  </div>
+
+                  <a class="notification-popup__view-all-notifications" href="#" data-url="">Посмотреть все сообщения</a>
+                </div>
+              </div>
+
+              <div class="page-header__notification-wrapper">
+                <a class="page-header__notification-icon  tooltip" href="#" data-notification-count="3" title="Чат">
+                  <i class="fa  fa-commenting-o"></i>
+                </a>
+
+                <div class="notification-popup  notification-popup--chat">
+                  <div class="notification-popup__chat-section">
+                    <div class="notification-popup__chat">
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T03:20">03:20</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="ff6633" style="color: #ff6633;">Елизенцев Иван:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет</span>
+                      </div>
+
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T13:37">13:37</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="85c875" style="color: #85c875;">John Doe:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет, Привет, привет, Привет, привет, Привет, привет</span>
+                      </div>
+
+                      <div class="notification-popup__chat-message">
+                        <time class="notification-popup__chat-message-time" datetime="2017-12-20T13:37">13:37</time>
+                        <span class="notification-popup__chat-message-author" data-message-author-color="85c875" style="color: #85c875;">John Doe:</span>
+                        <span class="notification-popup__chat-message-text">Привет, привет, Привет, привет, Привет, привет, Привет, привет</span>
+                      </div>
+                    </div>
+
+                    <div class="notification-popup__chat-footer">
+                      <div class="notification-popup__chat-send-message-text">
+                        <input type="text" name="" placeholder="Введите текст сообщения...">
+                      </div>
+
+                      <div class="notification-popup__chat-send-message-button">
+                        <button type="button">Отправить</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="notification-popup__chat-members-section">
+                    <div class="notification-popup__chat-members-section-title">Участники</div>
+
+                    <ul class="notification-popup__chat-members-list">
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="online">Елизенцев Иван</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="online">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="afk">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="dnd">John Doe</li>
+                      <li class="notification-popup__chat-members-list-item" data-chat-member-status="offline">John Doe</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-header__user-section">
+              <div class="page-header__language-selection">
+                <div class="select  select--light  page-header__selected-language  tooltip" title="Выбрать язык">
+                  Русский
+                  <i class="fa  fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item  dropdown__item--current">
+                      <a href="#">Русский</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a href="#">English</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="page-header__user-profile">
+                <div class="page-header__user-info" data-selectable-dropdown="false">
+                  <div class="page-header__user-avatar">
+                    <img src="img/user-avatar.png" alt="" width="40" height="40">
+                  </div>
+
+                  <span class="page-header__user-name">Rush3D</span>
+
+                  <i class="fa  fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light  dropdown--user-profile">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item">
+                      <a href="#">Личный кабинет</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                      <a href="#">Выйти</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page-main-content">
+          <nav class="breadcrumbs">
+            <a class="breadcrumbs__item" href="/index.html">
+              <i class="fa  fa-home"></i>
+            </a>
+
+            <i class="fa  fa-angle-right"></i>
+
+            <a class="breadcrumbs__item  breadcrumbs__item--current">Панель состояния</a>
+          </nav>
+
+          <div class="page-main-content__header">
+            <h1 class="page-main-content__title">Панель состояния</h1>
+
+            <div class="page-main-content__controls">
+              <button class="button  page-main-content__control-refresh">
+                Обновить
+                <i class="fa  fa-repeat"></i>
+              </button>
+
+              <button class="button  page-main-content__control-minimize-all">
+                Свернуть все
+                <i class="fa  fa-chevron-up"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="overall-report">
+            <div class="overall-report__report-period">
+              <span class="overall-report__select-name">Отчетный период</span>
+
+              <div class="overall-report__report-period-selection">
+                <div class="select  select--light  tooltip" data-report-period="30days" data-selectable-dropdown="true" title="Выбрать период">
+                  <span class="select__value">30 дней</span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div class="dropdown  dropdown--light">
+                  <ul class="dropdown__items">
+                    <li class="dropdown__item" data-report-period="24hours">
+                      24 часа
+                    </li>
+
+                    <li class="dropdown__item" data-report-period="7days">
+                      7 дней
+                    </li>
+
+                    <li class="dropdown__item  dropdown__item--current" data-report-period="30days">
+                      30 дней
+                    </li>
+
+                    <li class="dropdown__item" data-report-period="halfYear">
+                      6 месяцев
+                    </li>
+
+                    <li class="dropdown__item" data-report-period="year">
+                      1 год
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="overall-report__report-categories">
+              <a class="overall-report__report-category  overall-report__report-category--visitors" href="#">
+                <div class="overall-report__report-category-icon"></div>
+
+                <div class="overall-report__report-category-text-content">
+                  <span class="overall-report__report-category-title">Посетители</span>
+
+                  <span class="overall-report__report-numerical-indicators">
+                    <i class="fa  fa-sort-up"></i>
+
+                    <span class="overall-report__report-numerical-indicators-value">102</span>
+                    <span class="overall-report__report-numerical-indicators-rate  overall-report__report-numerical-indicators-rate--grow">(+0.5%)</span>
+                  </span>
+                </div>
+              </a>
+
+              <a class="overall-report__report-category  overall-report__report-category--customers" href="#">
+                <div class="overall-report__report-category-icon"></div>
+
+                <div class="overall-report__report-category-text-content">
+                  <span class="overall-report__report-category-title">Клиенты</span>
+
+                  <span class="overall-report__report-numerical-indicators">
+                    <i class="fa  fa-sort-up  fa-rotate-180"></i>
+
+                    <span class="overall-report__report-numerical-indicators-value">102</span>
+                    <span class="overall-report__report-numerical-indicators-rate  overall-report__report-numerical-indicators-rate--shrink">(-0.5%)</span>
+                  </span>
+                </div>
+              </a>
+
+              <a class="overall-report__report-category  overall-report__report-category--orders" href="#">
+                <div class="overall-report__report-category-icon"></div>
+
+                <div class="overall-report__report-category-text-content">
+                  <span class="overall-report__report-category-title">Заказы</span>
+
+                  <span class="overall-report__report-numerical-indicators">
+                    <i class="fa  fa-sort-up"></i>
+
+                    <span class="overall-report__report-numerical-indicators-value">102</span>
+                    <span class="overall-report__report-numerical-indicators-rate  overall-report__report-numerical-indicators-rate--grow">(+0.5%)</span>
+                  </span>
+                </div>
+              </a>
+
+              <a class="overall-report__report-category  overall-report__report-category--purchases" href="#">
+                <div class="overall-report__report-category-icon"></div>
+
+                <div class="overall-report__report-category-text-content">
+                  <span class="overall-report__report-category-title">Покупки</span>
+
+                  <span class="overall-report__report-numerical-indicators">
+                    <i class="fa  fa-sort-up"></i>
+
+                    <span class="overall-report__report-numerical-indicators-value">102</span>
+                    <span class="overall-report__report-numerical-indicators-rate  overall-report__report-numerical-indicators-rate--grow">(+0.5%)</span>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- График прибыли -->
+          <div class="blocks-wrapper">
+            <div class="report-block  report-block--wide" data-report-block-name="earning" data-chart-type="filledArea">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">График прибыли</span>
+
+                  <div class="report-block__header-controls">
+                    <div class="report-block__header-report-period">
+                      <div class="select  select--dark  tooltip" data-report-period="30days" data-selectable-dropdown="true" title="Выбрать период">
+                        <span class="select__value">30 дней</span>
+                        <i class="fa  fa-angle-down"></i>
+                      </div>
+
+                      <div class="dropdown  dropdown--dark">
+                        <ul class="dropdown__items">
+                          <li class="dropdown__item" data-report-period="24hours">
+                            24 часа
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="7days">
+                            7 дней
+                          </li>
+
+                          <li class="dropdown__item  dropdown__item--current" data-report-period="30days">
+                            30 дней
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="halfYear">
+                            Полгода
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="year">
+                            Год
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-block__chart-wrapper">
+                <div id="asd" class="report-block__chart">
+                  <!-- А тут график :) -->
+                </div>
+              </div>
+            </div>
+
+            <!-- График оформления заказов -->
+            <div class="report-block  report-block--wide" data-report-block-name="ordering" data-chart-type="filledArea">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">График оформления заказов</span>
+
+                  <div class="report-block__header-controls">
+                    <div class="report-block__header-report-period">
+                      <div class="select  select--dark  tooltip" data-report-period="30days" data-selectable-dropdown="true" title="Выбрать период">
+                        <span class="select__value">30 дней</span>
+                        <i class="fa  fa-angle-down"></i>
+                      </div>
+
+                      <div class="dropdown  dropdown--dark">
+                        <ul class="dropdown__items">
+                          <li class="dropdown__item" data-report-period="24hours">
+                            24 часа
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="7days">
+                            7 дней
+                          </li>
+
+                          <li class="dropdown__item  dropdown__item--current" data-report-period="30days">
+                            30 дней
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="halfYear">
+                            Полгода
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="year">
+                            Год
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-block__chart">
+                <canvas>
+                  <!-- А тут график :) -->
+                </canvas>
+              </div>
+            </div>
+
+            <!-- График совершенных покупок -->
+            <div class="report-block  report-block--wide" data-report-block-name="purchasing" data-chart-type="filledArea">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">График совершенных покупок</span>
+
+                  <div class="report-block__header-controls">
+                    <div class="report-block__header-report-period">
+                      <div class="select  select--dark  tooltip" data-report-period="30days" data-selectable-dropdown="true" title="Выбрать период">
+                        <span class="select__value">30 дней</span>
+                        <i class="fa  fa-angle-down"></i>
+                      </div>
+
+                      <div class="dropdown  dropdown--dark">
+                        <ul class="dropdown__items">
+                          <li class="dropdown__item" data-report-period="24hours">
+                            24 часа
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="7days">
+                            7 дней
+                          </li>
+
+                          <li class="dropdown__item  dropdown__item--current" data-report-period="30days">
+                            30 дней
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="halfYear">
+                            Полгода
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="year">
+                            Год
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-block__chart">
+                <canvas>
+                  <!-- А тут график :) -->
+                </canvas>
+              </div>
+            </div>
+
+            <!-- Браузерный трафик -->
+            <div class="blocks-wrapper">
+              <div class="report-block  report-block--narrow  report-block--narrow-text-stats" data-report-block-name="browsersTraffic" data-chart-type="none">
+                <div class="report-block__header">
+                  <div class="report-block__header-inner">
+                    <span class="report-block__header-title">Браузерный трафик</span>
+
+                    <div class="report-block__header-controls">
+                      <div class="report-block__header-report-period">
+                        <div class="select  select--dark  tooltip" data-report-period="month" data-selectable-dropdown="true" title="Выбрать период">
+                          <span class="select__value">Месяц</span>
+                          <i class="fa  fa-angle-down"></i>
+                        </div>
+
+                        <div class="dropdown  dropdown--dark">
+                          <ul class="dropdown__items">
+                            <li class="dropdown__item" data-report-period="day">
+                              День
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="week">
+                              Неделя
+                            </li>
+
+                            <li class="dropdown__item  dropdown__item--current" data-report-period="month">
+                              Месяц
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="halfYear">
+                              Полгода
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="year">
+                              Год
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <span class="report-block__header-control-toggle-pie-chart  tooltip" data-state-pie-chart="hidden" title="Показать круговую диаграмму">
+                        <i class="fa  fa-pie-chart"></i>
+                      </span>
+
+                      <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                        <i class="fa  fa-repeat"></i>
+                      </span>
+
+                      <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                        <i class="fa  fa-angle-up"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-block__text-stats">
+                  <div class="report-block__text-stats-table">
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Google Chrome</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">45%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Mozilla Firefox</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">15%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Opera</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">13%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Edge</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">12%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Internet Explorer</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Другое</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">5%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Трафик устройств -->
+              <div class="report-block  report-block--narrow  report-block--narrow-text-stats" data-report-block-name="devicesTraffic" data-chart-type="none">
+                <div class="report-block__header">
+                  <div class="report-block__header-inner">
+                    <span class="report-block__header-title">Трафик устройств</span>
+
+                    <div class="report-block__header-controls">
+                      <div class="report-block__header-report-period">
+                        <div class="select  select--dark  tooltip" data-report-period="month" data-selectable-dropdown="true" title="Выбрать период">
+                          <span class="select__value">Месяц</span>
+                          <i class="fa  fa-angle-down"></i>
+                        </div>
+
+                        <div class="dropdown  dropdown--dark">
+                          <ul class="dropdown__items">
+                            <li class="dropdown__item" data-report-period="day">
+                              День
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="week">
+                              Неделя
+                            </li>
+
+                            <li class="dropdown__item  dropdown__item--current" data-report-period="month">
+                              Месяц
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="halfYear">
+                              Полгода
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="year">
+                              Год
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <span class="report-block__header-control-toggle-pie-chart  tooltip" data-state-pie-chart="hidden" title="Показать круговую диаграмму">
+                        <i class="fa  fa-pie-chart"></i>
+                      </span>
+
+                      <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                        <i class="fa  fa-repeat"></i>
+                      </span>
+
+                      <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                        <i class="fa  fa-angle-up"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-block__text-stats">
+                  <div class="report-block__text-stats-table">
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Компьютеры</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">50%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Планшеты</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">25%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Смартфоны</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">25%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Трафик ОС -->
+              <div class="report-block  report-block--narrow  report-block--narrow-text-stats" data-report-block-name="OSTraffic" data-chart-type="none">
+                <div class="report-block__header">
+                  <div class="report-block__header-inner">
+                    <span class="report-block__header-title">Трафик ОС</span>
+
+                    <div class="report-block__header-controls">
+                      <div class="report-block__header-report-period">
+                        <div class="select  select--dark  tooltip" data-report-period="month" data-selectable-dropdown="true" title="Выбрать период">
+                          <span class="select__value">Месяц</span>
+                          <i class="fa  fa-angle-down"></i>
+                        </div>
+
+                        <div class="dropdown  dropdown--dark">
+                          <ul class="dropdown__items">
+                            <li class="dropdown__item" data-report-period="day">
+                              День
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="week">
+                              Неделя
+                            </li>
+
+                            <li class="dropdown__item  dropdown__item--current" data-report-period="month">
+                              Месяц
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="halfYear">
+                              Полгода
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="year">
+                              Год
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <span class="report-block__header-control-toggle-pie-chart  tooltip" data-state-pie-chart="hidden" title="Показать круговую диаграмму">
+                        <i class="fa  fa-pie-chart"></i>
+                      </span>
+
+                      <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                        <i class="fa  fa-repeat"></i>
+                      </span>
+
+                      <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                        <i class="fa  fa-angle-up"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-block__text-stats">
+                  <div class="report-block__text-stats-table">
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Windows</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">50%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">iOS</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">macOS</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">BlackBerry</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Linux</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Android</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">5%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Другое</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">5%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Геолокация -->
+              <div class="report-block  report-block--narrow  report-block--narrow-text-stats" data-report-block-name="geolocation" data-chart-type="none">
+                <div class="report-block__header">
+                  <div class="report-block__header-inner">
+                    <span class="report-block__header-title">Геолокация</span>
+
+                    <div class="report-block__header-controls">
+                      <div class="report-block__header-report-period">
+                        <div class="select  select--dark  tooltip" data-report-period="month" data-selectable-dropdown="true" title="Выбрать период">
+                          <span class="select__value">Месяц</span>
+                          <i class="fa  fa-angle-down"></i>
+                        </div>
+
+                        <div class="dropdown  dropdown--dark">
+                          <ul class="dropdown__items">
+                            <li class="dropdown__item" data-report-period="day">
+                              День
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="week">
+                              Неделя
+                            </li>
+
+                            <li class="dropdown__item  dropdown__item--current" data-report-period="month">
+                              Месяц
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="halfYear">
+                              Полгода
+                            </li>
+
+                            <li class="dropdown__item" data-report-period="year">
+                              Год
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <span class="report-block__header-control-toggle-pie-chart  tooltip" data-state-pie-chart="hidden" title="Показать круговую диаграмму">
+                        <i class="fa  fa-pie-chart"></i>
+                      </span>
+
+                      <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                        <i class="fa  fa-repeat"></i>
+                      </span>
+
+                      <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                        <i class="fa  fa-angle-up"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-block__text-stats">
+                  <div class="report-block__text-stats-table">
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Красноярск</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">50%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Город</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Город</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Город</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Город</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">10%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Город</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">5%</div>
+                    </div>
+
+                    <div class="report-block__text-stats-table-row">
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--key">Другое</div>
+                      <div class="report-block__text-stats-table-cell  report-block__text-stats-table-cell--value">5%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Трафик посещений -->
+            <div class="report-block  report-block--wide" data-report-block-name="visiting" data-chart-type="linear">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">Трафик посещений</span>
+
+                  <div class="report-block__header-controls">
+                    <div class="report-block__header-report-period">
+                      <div class="select  select--dark  tooltip" data-report-period="30days" data-selectable-dropdown="true" title="Выбрать период">
+                        <span class="select__value">30 дней</span>
+                        <i class="fa  fa-angle-down"></i>
+                      </div>
+
+                      <div class="dropdown  dropdown--dark">
+                        <ul class="dropdown__items">
+                          <li class="dropdown__item" data-report-period="24hours">
+                            24 часа
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="7days">
+                            7 дней
+                          </li>
+
+                          <li class="dropdown__item  dropdown__item--current" data-report-period="30days">
+                            30 дней
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="halfYear">
+                            Полгода
+                          </li>
+
+                          <li class="dropdown__item" data-report-period="year">
+                            Год
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-block__chart">
+                <canvas>
+                  <!-- А тут график :) -->
+                </canvas>
+              </div>
+            </div>
+
+            <!-- Текущие скидки, акции -->
+            <div class="report-block  report-block--wide" data-report-block-name="currentDiscountsAndActions" data-chart-type="none">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">Текущие скидки, акции</span>
+
+                  <span class="report-block__header-time">
+                    <i class="fa fa-clock-o"></i>
+                    01:06
+                  </span>
+
+                  <div class="report-block__header-controls">
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <table class="report-block__table">
+                <thead>
+                  <tr class="report-block__table-header-row">
+                    <th class="report-block__table-header-cell">
+                      Номер
+                      <i class="fa fa-sort-asc"></i>
+                    </th>
+
+                    <th class="report-block__table-header-cell">Наименование</th>
+                    <th class="report-block__table-header-cell">Дата начала</th>
+                    <th class="report-block__table-header-cell">Дата окончания</th>
+                    <th class="report-block__table-header-cell">Скидка</th>
+                    <th class="report-block__table-header-cell">Назначение</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">1</td>
+                    <td class="report-block__table-body-cell">roflanChelik</td>
+                    <td class="report-block__table-body-cell">21-11-2017 00:00</td>
+                    <td class="report-block__table-body-cell">25-11-2017 00:00</td>
+                    <td class="report-block__table-body-cell">3%</td>
+                    <td class="report-block__table-body-cell">Товар</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">2</td>
+                    <td class="report-block__table-body-cell">roflanDulya</td>
+                    <td class="report-block__table-body-cell">22-11-2017 00:00</td>
+                    <td class="report-block__table-body-cell">26-11-2017 00:00</td>
+                    <td class="report-block__table-body-cell">5%</td>
+                    <td class="report-block__table-body-cell">Товары</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">3</td>
+                    <td class="report-block__table-body-cell">roflanVglorius</td>
+                    <td class="report-block__table-body-cell">23-11-2017 14:00</td>
+                    <td class="report-block__table-body-cell">27-11-2017 14:00</td>
+                    <td class="report-block__table-body-cell">5%</td>
+                    <td class="report-block__table-body-cell">Категория</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">4</td>
+                    <td class="report-block__table-body-cell">roflanPominki</td>
+                    <td class="report-block__table-body-cell">24-11-2017 15:00</td>
+                    <td class="report-block__table-body-cell">28-11-2017 15:00</td>
+                    <td class="report-block__table-body-cell">10%</td>
+                    <td class="report-block__table-body-cell">Категории</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">5</td>
+                    <td class="report-block__table-body-cell">nexUbah</td>
+                    <td class="report-block__table-body-cell">25-11-2017 22:00</td>
+                    <td class="report-block__table-body-cell">29-11-2017 22:00</td>
+                    <td class="report-block__table-body-cell">15%</td>
+                    <td class="report-block__table-body-cell">Товары</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button class="report-block__show-more" data-current-count="5" data-step-count="5">Показать еще</button>
+            </div>
+
+            <!-- Последние заказы -->
+            <div class="report-block  report-block--wide  report-block--recent-order" data-report-block-name="recentOrders" data-chart-type="none">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">Последние заказы</span>
+
+                  <div class="report-block__header-controls">
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <table class="report-block__table">
+                <thead>
+                  <tr class="report-block__table-header-row">
+                    <th class="report-block__table-header-cell">
+                      Номер
+                      <i class="fa fa-sort-asc"></i>
+                    </th>
+
+                    <th class="report-block__table-header-cell">Дата заказа</th>
+                    <th class="report-block__table-header-cell">Клиент</th>
+                    <th class="report-block__table-header-cell">Номер заказа</th>
+                    <th class="report-block__table-header-cell">Стоимость</th>
+                    <th class="report-block__table-header-cell">Статус</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">1</td>
+                    <td class="report-block__table-body-cell">21-11-2017 21:39</td>
+                    <td class="report-block__table-body-cell">Елизенцев Иван</td>
+                    <td class="report-block__table-body-cell">0000000001</td>
+                    <td class="report-block__table-body-cell">1000 <i class="fa fa-rub"></i></td>
+                    <td class="report-block__table-body-cell">
+                      <div class="report-block__order-status" data-order-status="received">Получен</div>
+                    </td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">2</td>
+                    <td class="report-block__table-body-cell">19-11-2017 22:40</td>
+                    <td class="report-block__table-body-cell">Вячеслав Машнов</td>
+                    <td class="report-block__table-body-cell">0000000002</td>
+                    <td class="report-block__table-body-cell">999 <i class="fa fa-rub"></i></td>
+                    <td class="report-block__table-body-cell">
+                      <div class="report-block__order-status" data-order-status="cancelled">Отменен</div>
+                    </td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">3</td>
+                    <td class="report-block__table-body-cell">11-11-2017 01:40</td>
+                    <td class="report-block__table-body-cell">Геннадий Фарафонов</td>
+                    <td class="report-block__table-body-cell">0000000003</td>
+                    <td class="report-block__table-body-cell">1337 <i class="fa fa-rub"></i></td>
+                    <td class="report-block__table-body-cell">
+                      <div class="report-block__order-status" data-order-status="pending">Ожидает на&nbsp;складе</div>
+                    </td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">4</td>
+                    <td class="report-block__table-body-cell">01-01-2016 13:37</td>
+                    <td class="report-block__table-body-cell">Фамилия Имя</td>
+                    <td class="report-block__table-body-cell">0000000004</td>
+                    <td class="report-block__table-body-cell">10001 <i class="fa fa-rub"></i></td>
+                    <td class="report-block__table-body-cell">
+                      <div class="report-block__order-status" data-order-status="suspended">Приоста &shy;новлен</div>
+                    </td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row">
+                    <td class="report-block__table-body-cell">5</td>
+                    <td class="report-block__table-body-cell">29-02-2016 14:48</td>
+                    <td class="report-block__table-body-cell">Фамилия Имя</td>
+                    <td class="report-block__table-body-cell">0000000005</td>
+                    <td class="report-block__table-body-cell">783478 <i class="fa fa-rub"></i></td>
+                    <td class="report-block__table-body-cell">
+                      <div class="report-block__order-status" data-order-status="received">Получен</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button class="report-block__show-more" data-current-count="5" data-step-count="5">Показать еще</button>
+            </div>
+
+            <!-- Оценки клиентов -->
+            <div class="report-block  report-block--wide  report-block--customers-ratings" data-report-block-name="customersRatings" data-chart-type="none">
+              <div class="report-block__header">
+                <div class="report-block__header-inner">
+                  <span class="report-block__header-title">Оценки клиентов</span>
+
+                  <span class="report-block__header-votes-quantity">2500 голосов</span>
+
+                  <div class="report-block__header-controls">
+                    <span class="report-block__header-control-refresh  tooltip" title="Обновить">
+                      <i class="fa  fa-repeat"></i>
+                    </span>
+
+                    <span class="report-block__header-control-toggle-visibility  tooltip" data-report-block-state-visibility="expanded" title="Свернуть">
+                      <i class="fa  fa-angle-up"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <table class="report-block__table">
+                <tbody>
+                  <tr class="report-block__table-body-row  report-block__table-body-row--five-stars">
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-stars">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-bar">
+                      <div class="report-block__rating-bar">
+                        <div class="report-block__rating-bar-value" style="width: 325px;"></div>
+                      </div>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-value">65%</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row  report-block__table-body-row--four-stars">
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-stars">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star-o"></i>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-bar">
+                      <div class="report-block__rating-bar">
+                        <div class="report-block__rating-bar-value" style="width: 75px;"></div>
+                      </div>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-value">15%</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row  report-block__table-body-row--three-stars">
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-stars">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-bar">
+                      <div class="report-block__rating-bar">
+                        <div class="report-block__rating-bar-value" style="width: 50px;"></div>
+                      </div>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-value">10%</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row  report-block__table-body-row--two-stars">
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-stars">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-bar">
+                      <div class="report-block__rating-bar">
+                        <div class="report-block__rating-bar-value" style="width: 25px;"></div>
+                      </div>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-value">5%</td>
+                  </tr>
+
+                  <tr class="report-block__table-body-row  report-block__table-body-row--one-star">
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-stars">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                      <i class="fa  fa-star-o"></i>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-bar">
+                      <div class="report-block__rating-bar">
+                        <div class="report-block__rating-bar-value" style="width: 25px;"></div>
+                      </div>
+                    </td>
+
+                    <td class="report-block__table-body-cell  report-block__table-body-cell--rating-value">5%</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button class="report-block__show-more" data-current-count="5" data-step-count="5">Показать еще</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__copyright">
+          <span class="page-footer__create-by">Created by Rush3D1337</span>
+        </div>
+
+        <div class="page-footer__cms-version">
+          Version 0.1
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script src="js/selectDropdown.js"></script>
+    <script src="js/reportBlock.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

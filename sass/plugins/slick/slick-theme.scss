@@ -1,0 +1,52 @@
+.slick-prev, .slick-next {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: transparent;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  
+  &:hover, &:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 4px);
+    width: 10px;
+    height: 10px;
+    border: 3px solid #ffffff;
+    border-bottom: none;
+    border-left: none;
+    transform: translate(-50%, -50%) rotate(225deg);
+    opacity: 0.75;
+  }
+}
+
+.slick-next {
+  left: auto;
+  right: 0;
+  
+  &::before {
+    left: calc(50% - 4px);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.slick-prev.slick-disabled::before, .slick-next.slick-disabled::before {
+  opacity: 0.25;
+}

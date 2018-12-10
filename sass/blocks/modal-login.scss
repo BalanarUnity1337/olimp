@@ -1,0 +1,193 @@
+.modal-login {
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  min-height: 178px;
+  color: $main-font-color-1;
+  border: 1px solid $main-border-color-2;
+  border-radius: 3px;
+  background-color: $block-bg-color-2;
+
+  &--show {
+    display: block;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+}
+
+.modal-login__inner {
+  position: relative;
+  z-index: 20;
+  padding: 15px 9px;
+}
+
+.modal-login__login-form {
+
+}
+
+.modal-login__form-row {
+  margin-bottom: 15px;
+  font-size: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--user-controls {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.modal-login__input-field {
+  width: 240px;
+  height: 26px;
+  padding: 7px 10px;
+
+  &:focus {
+    padding: 6px 9px;
+  }
+}
+
+.modal-login__remember-me {
+  float: left;
+  font-size: 14px;
+  line-height: 18px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-2;
+  }
+}
+
+.modal-login__forgotten-password {
+  float: right;
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-font-color-2;
+  }
+}
+
+.modal-login__login-button {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+
+.modal-login__close-button {
+  @include button-reset();
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 18;
+  right: 16px;
+  top: -25px;
+  width: 26px;
+  height: 25px;
+  font-size: 0;
+  border: 1px solid $main-border-color-2;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  background-color: $block-bg-color-2;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    background-color: $main-font-color-1;
+    transition: background-color 0.3s ease;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover {
+    border-color: $hover-button-bg-color-1;
+    background-color: $hover-button-bg-color-1;
+
+    &::before, &::after {
+      background-color: $hover-button-font-color-1;
+    }
+  }
+}
+
+.modal-login input[type="checkbox"]:checked + .modal-login__remember-me {
+  color: $hover-font-color-2;
+  background-color: transparent;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// < --- Tablet width --- >
+
+@media #{$tablet-width} {
+  .modal-login {
+    width: 272px;
+    min-height: 200px;
+  }
+
+  .modal-login__inner {
+    padding: 25px 15px;
+  }
+
+  .modal-login__login-button {
+    width: 120px;
+    height: 32px;
+  }
+
+  .modal-login__close-button {
+    right: 16px;
+    top: -29px;
+    width: 30px;
+    height: 29px;
+
+    &::before, &::after {
+      width: 18px;
+    }
+  }
+}
+
+// < --- Desktop width --- >
+
+@media #{$desktop-width} {
+  .modal-login__login-button {
+
+  }
+}
